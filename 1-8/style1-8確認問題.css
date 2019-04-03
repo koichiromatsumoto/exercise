@@ -1,0 +1,21 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header{
+	position: relative;
+}
+
+.position{
+    position: absolute;
+    top: 100px;
+    right: 40px;
+}
+
+.position i{
+	font-size: 32px;
+    display: inline-block;
+
+}
