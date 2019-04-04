@@ -10,6 +10,7 @@
     clear: both;
 }
 
+
 header{
 	width: 100%;
 	height: 70px;
@@ -46,7 +47,8 @@ header{
 	color:#FAFAFA;
 }
 
-.main-visual{
+/*メインビジュアル*/
+#main-visual{
 	width: 100%;
 	height: 650px;
 	background-image: url(img/mv.png);
@@ -68,7 +70,8 @@ header{
 	padding-top: 10px;
 }
 
-.portfolio{
+/*ポートフォリオ*/
+#portfolio{
 	background-color: #ECEFF1;
 	padding: 90px 0;
 }
@@ -161,7 +164,8 @@ header{
 	float: left;
 }
 
-.feature{
+/*フィーチャー*/
+#feature{
 	padding: 90px 0;
 }
 
@@ -191,10 +195,10 @@ header{
 }
 
 .feature-box-item:last-child{
-	margin: 0;
+	margin-right: 0;
 }
 
-.fab{
+.feature-box-item .fab{
 	display: inline-block;
 	font-size: 60px;
 }
@@ -210,7 +214,8 @@ header{
 	text-align: left;
 }
 
-.profile{
+/*プロフィール*/
+#profile{
 	background-color: #ECEFF1;
 	padding: 90px 0;
 }
@@ -236,7 +241,6 @@ header{
 .img-box{
 	width: 512px;
 	float: left;
-	padding-left: 128px;
 }
 
 .img-myicon{
@@ -246,6 +250,7 @@ header{
 	background-size: cover;
 	background-position: center;
 	border-radius: 50%;
+	margin: 0 auto;
 }
 
 .profile-para{
@@ -263,13 +268,331 @@ h4{
 	padding-bottom: 20px;
 }
 
+/*コンタクト*/
+#contact{
+	padding: 90px 0;
+}
+
+.contact-title{
+	font-size: 32px;
+	color: #000000;
+	text-align: center;
+}
+
+.contact-text{
+	font-size: 16px;
+	color: #000000;
+	text-align: center;
+	margin: 30px auto;
+}
+
+.contact-box{
+	width: 800px;
+	margin: 30px auto 0 auto;
+}
+
+.mailtel-box{
+	width: 50%;
+	float: left;
+}
+
+.mail-box{
+	width: 130px;
+	margin : 0 auto;
+	padding-bottom: 20px;
+}
+
+.tel-box{
+	width: 130px;
+	margin: 0 auto;
+}
+
+.sns-box{
+	width: 300px;
+	float: left;
+}
+
+.sns{
+	width: 200px;
+	margin: 0 auto;
+}
+
+.social{
+	width: 200px;
+	margin: 0 auto;
+}
+
+.sns-box .fab{
+	display: inline-block;
+	font-size: 50px;
+	padding-right: 20px;
+}
+
+.sns-box .fab:last-child{
+	padding-right: 0;
+}
+
+
+footer{
+	width: 100%;
+	height: 60px;
+	background-color: #EC715F;
+}
+
+.footer-text{
+	font-size: 16px;
+	color: #FAFAFA;
+	text-align: center;
+	line-height: 60px;
+}
+
+
+@media screen and (max-width:767px){
+
+	
+
+	header{
+		height: 50px;
+	}
+
+	.header-logo{
+		height: 50px;
+	}
+
+	.nav-list{
+		display: none;
+	}
+
+	/*ハンバーガーメニュー*/
+
+	#nav-drawer {
+        width: 90%;
+        height: 50px;
+    }
+
+    /*チェックボックス等は非表示に*/
+    .nav-unshown {
+        display:none;
+    }
+
+    /*アイコンのスペース*/
+    #nav-open {
+	    display: inline-block;
+	    vertical-align: middle;
+	    width: 40px;
+	    height: 40px;
+        text-align: center;
+        float: right;
+        margin-right: 5%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border: 1px solid #FAFAFA
+	}
+
+	.span-box{
+		width:40px;
+		height: 40px;
+		cursor: pointer;
+	}
+
+	/*ハンバーガーアイコンをCSSだけで表現*/
+	#nav-open span{
+	    height: 2px;/*線の太さ*/
+	    width: 25px;/*長さ*/
+	    border-radius: 3px;
+	    background: #FAFAFA;
+	    display: block;
+	    content: '';
+	    margin: 5px auto;
+    }
+
+    #nav-open span:first-child{
+    	margin-top: 10px;
+    }
+
+    /*閉じる用の薄黒カバー*/
+    #nav-close {
+        display: none;/*はじめは隠しておく*/
+        position: fixed;
+        z-index: 99;
+        top: 0;/*全体に広がるように*/
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0;
+        transition: .3s ease-in-out;
+    }
+
+    #nav-content {
+		overflow: auto;
+		position: fixed;
+		top: 0;
+		right: -100vw;
+		z-index: 9999;/*最前面に*/
+		width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
+		max-width: 330px;/*最大幅（調整してください）*/
+		height: 300px;
+		background: #EC715F;/*背景色*/
+		transition: .3s ease-in-out;/*滑らかに表示*/
+		-webkit-transform: translateX(100vw);
+		transform: translateX(100vw);/*左に隠しておく*/
+    }
+
+    /*チェックが入ったらもろもろ表示*/
+    #nav-input:checked ~ #nav-close {
+		display: block;/*カバーを表示*/
+		opacity: .5;
+    }
+
+    #nav-input:checked ~ #nav-content {
+		-webkit-transform: translateX(-100vw);
+		transform: translateX(-100vw);/*中身を表示（右へスライド）*/
+		box-shadow: 6px 0 25px rgba(0,0,0,.15);
+    }
+
+
+    .nav-hum{
+		width: 100%;
+	}
+
+	.nav-hum-list{
+		float: none;
+	}
+
+	.nav-hum-list-item{
+		margin: 30px auto;
+		list-style: none;
+		width: 120px;
+		font-size: 20px;
+	}
+
+	.nav-hum-list-item a{
+		text-decoration: none;
+		color:#FAFAFA;
+	}
 
 
 
+    #main-visual{
+	    background-image: url(img/code.png);
+	    padding-right: 5%;
+	    padding-left: 5%;
+    }
+
+    .main-visual-title{
+	    font-size: 40px;
+	}
+
+	.main-visual-text{
+	    font-size: 18px;
+    }
+
+    #portfolio{
+    	padding-right: 5%;
+    	padding-left: 5%;
+    }
+
+    .portfolio-box{
+    	width: 300px;
+    }
+
+    .portfolio-box-item1{
+		display: none;
+	}
+
+	.portfolio-box-item3{
+		display: none;
+	}
+
+	.portfolio-box-item4{
+		margin-bottom: 10px;
+	}
+
+	.portfolio-box-item5{
+	    display: none;
+    }
+
+    #feature{
+    	padding-right: 5%;
+    	padding-left: 5%;
+    }
+
+    .feature-box{
+		width: 320px;
+	}
+
+	.feature-box-item{
+		margin-top: 10px;
+	}
+
+	#profile{
+		padding-right: 5%;
+		padding-left: 5%;
+	}
+
+	.profile-box{
+		width: 90%;
+	}
+
+	.img-box{
+		width: 100%;
+		float: none;
+	}
+
+	.profile-para{
+		text-align: center;
+		margin-top: 20px;
+	}
+
+	#contact{
+		padding-right: 5%;
+		padding-left: 5%;
+	}
+
+	.contact-box{
+		width: 100%;
+	}
+
+	.mailtel-box{
+		float: none;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.sns-box{
+		width: 100%;
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	.sns{
+		margin: 0 auto;
+	}
+
+	.social{
+		margin: 0 auto;
+	}
+
+	.sns-box .fab{
+		padding-right: 8px;
+	}
 
 
 
+}
 
+@media screen and (min-width:768px){
+    #nav-input{
+    	display: none;
+    }
 
+	#nav-open{
+		display: none;
+	}
 
+	#nav-content{
+		display: none;
+	}
+}
 

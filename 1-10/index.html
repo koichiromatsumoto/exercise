@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
 	<title>MySite</title>
@@ -11,35 +12,69 @@
 <body>
 
 	<header>
+		<div>
+			<a href="#main-visual"><img class="header-logo" src="img/logo.png"></a>
+		</div>
 		<nav class="nav">
-			<div>
-			    <a href=""><img class="header-logo" src="img/logo.png"></a>
-		    </div>
 		    <ul class="nav-list">
 				<li class="nav-list-item">
-					<a href="">Portfolio</a>
+					<a href="#portfolio">Portfolio</a>
 				</li>
 				<li class="nav-list-item">
-					<a href="">Feature</a>
+					<a href="#feature">Feature</a>
 				</li>
 				<li class="nav-list-item">
-					<a href="">Profile</a>
+					<a href="#profile">Profile</a>
 				</li>
 				<li class="nav-list-item">
-					<a href="">Contact</a>
+					<a href="#contact">Contact</a>
 				</li>
 			</ul>
 		</nav>
+        <!-- ハンバーガーメニュー -->
+
+        <div id="nav-drawer clearfix">
+	        <input id="nav-input" type="checkbox" class="nav-unshown">
+	        <label id="nav-open" for="nav-input">
+	        	<div class="span-box">
+		            <span></span>
+		            <span></span>
+		            <span></span>
+		        </div>
+	        </label>
+	        <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+	        <div id="nav-content">
+	            <nav class="nav-hum">
+			        <ul class="nav-hum-list">
+						<li class="nav-hum-list-item">
+							<a href="#portfolio">Portfolio</a>
+						</li>
+						<li class="nav-hum-list-item">
+							<a href="#feature">Feature</a>
+						</li>
+						<li class="nav-hum-list-item">
+							<a href="#profile">Profile</a>
+						</li>
+						<li class="nav-hum-list-item">
+							<a href="#contact">Contact</a>
+						</li>
+				    </ul>
+		        </nav>
+	        </div>
+        </div>
+
+
+
 	</header>
 
 	<!-- メインビジュアル -->
-	<div class="main-visual">
+	<div id="main-visual">
 		<h1 class="main-visual-title">Lorem Ipsum</h1>
 		<p class="main-visual-text">simply dummy text of the printing</p>
 	</div>
 
 	<!-- ポートフォリオ -->
-	<div class="portfolio">
+	<div id="portfolio">
 		<h2 class="portfolio-title">Portfolio</h2>
 		<div class="bar"></div>
 		<p class="portfolio-text">
@@ -58,7 +93,7 @@
 	</div>
 
 	<!-- フィーチャー -->
-	<div class="feature">
+	<div id="feature">
 		<h2 class="feature-title">Feature</h2>
 		<div class="bar"></div>
 		<p class="feature-text">
@@ -92,7 +127,7 @@
 	</div>
 
 	<!-- プロフィール -->
-	<div class="profile">
+	<div id="profile">
 		<h2 class="profile-title">Profile</h2>
 		<div class="bar"></div>
 		<p class="profile-text">
@@ -118,13 +153,39 @@
 	</div>
 
 	<!-- コンタクト -->
-	<div class="contact">
+	<div id="contact">
 		<h2 class="contact-title">Contact</h2>
 		<div class="bar"></div>
 		<p class="contact-text">
+			It is a long established fact that a reader will be distracted by the readable<br>
+			content of a page when looking at its layout.<br>
+			The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters
+		</p>
+		<div class="contact-box clearfix">
+			<div class="mailtel-box">
+				<div class="mail-box">
+					<h4 class="mail">Mail</h4>
+					<a class="maillink" href="mailto:xxx@xxx.com">xxx@xxx.com</a>
+				</div>
+				<div class="tel-box">
+					<h4 class="tel">Tell</h4>
+					<a class="tellink" href="tel:000-0000-0000">000-0000-0000</a>
+				</div>
+			</div>
+			<div class="sns-box">
+				<h4 class="sns">SNS</h4>
+				<div class="social">
+					<i class="fab fa-facebook-f"></i>
+					<i class="fab fa-twitter"></i>
+					<i class="fab fa-instagram"></i>
+				</div>
+			</div>
+		</div>
 	</div>
 
-
+	<footer>
+		<p class="footer-text">©︎2017 WebCamp</p>
+	</footer>
 
 </body>
 
